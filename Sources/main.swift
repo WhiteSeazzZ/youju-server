@@ -6,12 +6,12 @@ let server = HTTPServer()
 server.documentRoot = "./webroot"
 
 var routes = Routes();
-routes.add(method: .get, uri: "/", handler: {
-    HTTPRequest, HTTPResponse in 
-    HTTPResponse.setHeader(.contentType, value: "text/html")
-    HTTPResponse.appendBody(string: "<html><title>hello</title><body>hello</body></html>")
-    HTTPResponse.completed()
-})
+// routes.add(method: .get, uri: "/", handler: {
+//     HTTPRequest, HTTPResponse in 
+//     HTTPResponse.setHeader(.contentType, value: "text/html")
+//     HTTPResponse.appendBody(string: "<html><title>hello</title><body>hello</body></html>")
+//     HTTPResponse.completed()
+// })
 
 server.addRoutes(routes)
 
