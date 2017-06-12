@@ -3,6 +3,7 @@ import PerfectHTTP
 import PerfectHTTPServer
 
 let server = HTTPServer()
+server.documentRoot = "./webroot"
 
 var routes = Routes();
 routes.add(method: .get, uri: "/", handler: {
@@ -12,7 +13,7 @@ routes.add(method: .get, uri: "/", handler: {
     HTTPResponse.completed()
 })
 
-server.add(route: routes)
+server.addRoutes(routes)
 
 server.serverPort = 8181
 
